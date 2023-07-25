@@ -14,16 +14,14 @@
             <li><a href="/new">New Message</a></li>
         </ul>
     </nav>
-    <div class="message-content">
-      <h3>Messages</h4>
-      <% if(messages.length >0 ) { %> <% messages.map((message) => { %>
-        <h4 class="user"><%=message.user%></h3>
-        <p class="text"><%=message.text%></p>
-        <p class="date-added"><%=message.added%></p>
-      </a>
-      <%})} else {%>
-      <p>No messages saved</p>
-      <%}%>
+    <div class="create-new-message">
+        <form action="/new" method="POST">
+            <label for="user name"> User Name:</label>
+            <input type="text" id="user-name" name="userName" required />
+            <label for="message"> Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button>Submit</button>
+        </form>
     </div>
   </body>
 </html>
