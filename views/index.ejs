@@ -7,6 +7,17 @@
     <title>Message Board</title>
   </head>
   <body>
-    <h3>This is the message board project - Hello World!</h3>
+    <h2>This is the message board project - Hello World!</h3>
+    <div class="message-content">
+      <h3>Messages</h4>
+      <% if(messages.length >0 ) { %> <% messages.map((message) => { %>
+        <h4 class="user"><%=message.user%></h3>
+        <p class="text"><%=message.text%></p>
+        <p class="date-added"><%=message.added%></p>
+      </a>
+      <%})} else {%>
+      <p>No messages saved</p>
+      <%}%>
+    </div>
   </body>
 </html>
